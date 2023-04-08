@@ -1,0 +1,13 @@
+version: '3'
+services:
+  debian:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        USERNAME: ${USERNAME}
+        PASSWORD: ${PASSWORD}
+    container_name: debian
+    restart: always
+    tty: true
+    stdin_open: true
